@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Puzzle</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        header {
+            background-color: #d9534f;
+            padding: 10px;
+            color: white;
+            font-size: 24px;
+        }
+
+        #puzzle-container {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        #unique-code {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Christmas Puzzle Challenge
+    </header>
+
+    <div id="puzzle-container">
+        <script src="https://www.puzzlefast.com/en/puzzles/2023121604355868E/nsl-script?width=100%25&height=600px" type="text/javascript"></script>
+    </div>
+
+
+    <div id="unique-code"></div>
+
+    <script>
+        // Function to be called upon successful completion of the puzzle
+        function onPuzzleComplete(uniqueCode) {
+            // Display the unique code
+            document.getElementById('unique-code').innerHTML = `Congratulations! Your unique code is: ${uniqueCode}`;
+        }
+
+        
+        
+        window.onload = function() {
+  // Function to check style properties of the div with id 'puzzleitself'
+  function checkStyleProperties() {
+    var puzzleDiv = document.getElementById('puzzleitself');
+    
+    if (puzzleDiv) {
+      var style = window.getComputedStyle(puzzleDiv);
+      var visibility = style.getPropertyValue('visibility');
+
+      if (visibility !== null) {
+        console.log('Style property "visibility" is set to:', visibility);
+      } else {
+        console.log('Style property "visibility" is not set.');
+      }
+    } else {
+      console.log('Element with id "puzzleitself" not found.');
+    }
+  }
+
+  // Set interval to check style properties every second
+  setInterval(checkStyleProperties, 1000);
+};
+
+
+    </script>
+
+</body>
+</html>
